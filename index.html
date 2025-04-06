@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="change()">Change Background</button>
+    <script>
+      function change() {
+        let color = "#";
+        let hex = "0123456789abcdef";
+        for (let i = 0; i < 6; i++) {
+          color += hex[Math.floor(Math.random() * 16)];
+        }
+        document.getElementsByTagName("body")[0].style.backgroundColor = color;
+      setInterval(change,500)
+
+      }
+    </script>
+  </body>
+</html>
